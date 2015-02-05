@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<course xmlns="http://pluralsight.com/sapphire/course/2007/11">
+  <!--
+    The <title>, <shortDescription> and <longDescription> elements cannot be empty, and are displayed as-is
+    on the pluralsight.com home page for your course.
+  -->
+  <title>Foo Fundamentals</title>
+  
+  <shortDescription>One to two sentence short description of course. Appears on the main home page for your course, below the course title.</shortDescription>
+  
+  <description>Paragraph-sized description of the course. Appears on the 'Description' tab of the course page.</description>
+  
+  <modules>
+    <!--
+      The <module> elements below indicate which modules comprise the course, and the order in which those modules should be displayed.
+      The 'author' attribute is your assigned author ID, not your name.  Ask your editor if you don't know what it is yet.
+      The 'module' attribute corresponds to the folder name for each folder.  You make this up, but please use the following convention,
+      which incorporates the course-id, the module number, and a brief indication of the module's topic:
+      
+          course-id-m#-topic
+    -->
+    <module author="john-doe" name="foo-fundamentals-m1" />
+    <module author="john-doe" name="foo-fundamentals-m2" />
+    <module author="john-doe" name="foo-fundamentals-m3" />
+    <module author="john-doe" name="foo-fundamentals-m4" />
+  </modules>
+  
+  <topics>
+    <!-- List the key search terms that are applicable to this course here. -->
+    <topic>Foo</topic>
+    <topic>Bar</topic>
+    <topic>Baz</topic>
+  </topics>
+  
+  <category>foo</category> <!-- Official category ID (not name) as shown in the URL on pluralsight.com when you click on an entry in the Categories menu. -->
+
+  </course>

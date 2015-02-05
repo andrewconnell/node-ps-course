@@ -1,0 +1,39 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "xml2js/xml2js.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "vinyl/vinyl.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "q/Q.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "node/node.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "js-yaml/js-yaml.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "gulp-tslint/gulp-tslint.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "gulp/gulp.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "chai/chai.d.ts": {
+      "commit": "23b6edd28c0f5ccbe9e01bcfc84963d07b921ff7"
+    },
+    "gulp-typescript/gulp-typescript.d.ts": {
+      "commit": "fd7728a4e622d1ea058127393d6b8e45badaefc1"
+    }
+  }
+}

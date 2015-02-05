@@ -1,0 +1,17 @@
+course:
+  id: foo-fundamentals
+  title: Foo Fundamentals
+  category: foo
+  shortDescription: >
+    One to two sentence short description of course. Appears on the main home page for your course, below the course title.
+  longDescription: >
+    Paragraph-sized description of the course. Appears on the 'Description' tab of the course page.
+  topics:
+    - Foo
+    - Bar
+    - Baz
+  modules:
+    - m1-fooFunModule
+    - m2-fooFunModule
+    - m3-fooFunModule
+    - m4-fooFunModule

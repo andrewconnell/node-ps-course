@@ -1,0 +1,22 @@
+# webstorm
+.idea/
+
+# installed node modules
+node_modules/
+
+# typescript type definition files
+#   & config to download them
+typings/
+tsd.json
+tslint.json
+
+# ignore typescript & mapping files
+app.*
+*.ts
+*.js.map
+
+# gulp file
+gulpfile.*
+
+# ignore tests
+test/
