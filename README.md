@@ -102,7 +102,8 @@ Course.loadFromMeta(validPath)
   })
   .catch(function(error) {
     console.error(error);
-  });````
+  });
+````
 
 See the tests for full usage.
 

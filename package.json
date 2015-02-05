@@ -1,6 +1,6 @@
 {
   "name": "ps-course",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Assists in loading & creating Pluralsight course *.meta file using YAML or XML.",
   "author": {
     "name": "Andrew Connell",
