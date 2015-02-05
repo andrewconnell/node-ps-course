@@ -60,7 +60,7 @@ Course.loadFromMeta(validPath)
 
 
 Save Course as Pluralsight META File
---------------------------------------
+------------------------------------
 ````javascript
 var Course = require('ps-course');
 var course = new Course();
@@ -82,7 +82,30 @@ course.createMetaFile(tempBuildPath)
   });
 ````
 
+
+Check the validity of a Course
+--------------------------------------
+````javascript
+var Course = require('ps-course');
+var course = new Course();
+
+var course = {};
+var sourcePath = path.join(__dirname, 'fixtures');
+var validPath = path.join(sourcePath, 'foo-fundamentals-psexpected', 'foo-fundamentals.meta');
+
+Course.loadFromMeta(validPath)
+  .then(function(course) {
+    // check course's title length is within parameters
+    if (!course.isValid){
+      console.error('Title field is invalid.');
+    }
+  })
+  .catch(function(error) {
+    console.error(error);
+  });````
+
 See the tests for full usage.
+
 
 Development
 -----------
