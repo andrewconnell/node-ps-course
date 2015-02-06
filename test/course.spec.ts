@@ -288,7 +288,9 @@ describe('Course', () => {
     it('will fail when the string is too long', (done) => {
       course.title = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
 
-      expect(course.isValid()).to.be.false;
+      var results = course.validate();
+
+      expect(results.length).to.be.equal(1);
 
       done();
     });
@@ -296,7 +298,9 @@ describe('Course', () => {
     it('will pass when string is within parameters', (done) => {
       course.title = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
 
-      expect(course.isValid()).to.be.true;
+      var results = course.validate();
+
+      expect(results.length).to.be.equal(0);
 
       done();
     });
