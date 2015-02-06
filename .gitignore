@@ -22,3 +22,9 @@ node_modules
 
 # type definitions
 typings/
+
+# all JavaScript except that in /lib & gulpfile.js
+*.js
+*.js.map
+!lib/*.js
+!gulpfile.js

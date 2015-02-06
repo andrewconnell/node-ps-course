@@ -1,7 +1,7 @@
 /// <reference path="./typings/tsd.d.ts" />
 'use strict';
 // load gulp
-var gulp = require('gulp'), inject = require('gulp-inject'), stripline = require('gulp-strip-line'), tslint = require('gulp-tslint');
+var gulp = require('gulp'), inject = require('gulp-inject'), stripline = require('gulp-strip-line'), tsc = require('gulp-typescript'), tslint = require('gulp-tslint');
 // all files used in the app
 var appFiles = [
     'index.ts',
@@ -36,7 +36,7 @@ gulp.task('gen-app-references', function () {
  * ignored when publishing to NPM per .npmignore.
  */
 gulp.task('strip-js-ref-comment', function () {
-    return gulp.src('**/*.js').pipe(stripline([
+    return gulp.src(['**/*.js', '!node_modules/**/*.js', '!gulpfile.js']).pipe(stripline([
         '/// <reference path=',
         '//# sourceMappingURL='
     ])).pipe(gulp.dest(''));
@@ -46,6 +46,12 @@ gulp.task('strip-js-ref-comment', function () {
  */
 gulp.task('tslint', function () {
     return gulp.src(['**/*.ts', '!**/*.d.ts']).pipe(tslint()).pipe(tslint.report('prose'));
+});
+/**
+ * Compile TypeScript
+ */
+gulp.task('compile-ts', function () {
+    return gulp.src('**/*.ts').pipe(tsc({ declarationFiles: false, noExternalResolve: true }).js.pipe(gulp.dest('')));
 });
 /**
  * Prepare the package for publication to NPM's registry. This includes:

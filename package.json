@@ -35,6 +35,7 @@
     "gulp-inject": "^1.1.1",
     "gulp-strip-line": "0.0.1",
     "gulp-tslint": "^1.4.2",
+    "gulp-typescript": "^2.4.2",
     "gulp-util": "^3.0.2",
     "rimraf": "^2.2.8"
   },

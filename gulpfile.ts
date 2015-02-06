@@ -6,6 +6,7 @@
 var gulp = require('gulp'),
     inject = require('gulp-inject'),
     stripline = require('gulp-strip-line'),
+    tsc = require('gulp-typescript'),
     tslint = require('gulp-tslint');
 
 // all files used in the app
@@ -47,7 +48,7 @@ gulp.task('gen-app-references', function() {
  * ignored when publishing to NPM per .npmignore.
  */
 gulp.task('strip-js-ref-comment', () => {
-  return gulp.src('**/*.js')
+  return gulp.src(['**/*.js', '!node_modules/**/*.js', '!gulpfile.js'])
     .pipe(stripline([
       '/// <reference path=',
       '//# sourceMappingURL=']))
@@ -61,6 +62,15 @@ gulp.task('tslint', () => {
   return gulp.src(['**/*.ts', '!**/*.d.ts'])
     .pipe(tslint())
     .pipe(tslint.report('prose'));
+});
+
+/**
+ * Compile TypeScript
+ */
+gulp.task('compile-ts', () => {
+  return gulp.src('**/*.ts')
+    .pipe(tsc({declarationFiles: false, noExternalResolve: true})
+      .js.pipe(gulp.dest('')));
 });
 
 /**
